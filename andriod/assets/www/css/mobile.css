@@ -5,7 +5,7 @@
 }
 @font-face {
     font-family: DINWebCondensedBlack;
-    src: url('../assets/fonts/DINWeb-CondBlack.woff') format('woff'), url('../fonts/DINWeb-CondBlack.ttf') format('truetype');
+    src: url('../assets/fonts/DINWeb-CondBlack.woff') format('woff'), url('../assets/fonts/DINWeb-CondBlack.ttf') format('truetype');
 }
 
 @font-face {
@@ -14,7 +14,7 @@
 }
 @font-face {
     font-family: DINWebCondensedBold;
-    src: url('../assets/fonts/DINWeb-CondBold.woff') format('woff'), url('../fonts/DINWeb-CondBold.ttf') format('truetype');
+    src: url('../assets/fonts/DINWeb-CondBold.woff') format('woff'), url('../assets/fonts/DINWeb-CondBold.ttf') format('truetype');
 }
 
 @font-face {
@@ -23,7 +23,7 @@
 }
 @font-face {
     font-family: DINWebCondensedMedium;
-    src: url('../assets/fonts/DINWeb-CondMedium.woff') format('woff'), url('../fonts/DINWeb-CondMedium.ttf') format('truetype');
+    src: url('../assets/fonts/DINWeb-CondMedium.woff') format('woff'), url('../assets/fonts/DINWeb-CondMedium.ttf') format('truetype');
 }
 
 @font-face {
@@ -32,7 +32,7 @@
 }
 @font-face {
     font-family: DINWebCondensedRegular;
-    src: url('../assets/fonts/DINWeb-CondRegular.woff') format('woff'), url('../fonts/DINWeb-CondRegular.ttf') format('truetype');
+    src: url('../assets/fonts/DINWeb-CondRegular.woff') format('woff'), url('../assets/fonts/DINWeb-CondRegular.ttf') format('truetype');
 }
 
 @font-face {
@@ -41,7 +41,7 @@
 }
 @font-face {
     font-family: DINWebCondensed;
-    src: url('../assets/fonts/DINWeb-Cond.woff') format('woff'), url('../fonts/DINWeb-Cond.ttf') format('truetype');
+    src: url('../assets/fonts/DINWeb-Cond.woff') format('woff'), url('../assets/fonts/DINWeb-Cond.ttf') format('truetype');
 }
 
 @font-face {
@@ -50,7 +50,7 @@
 }
 @font-face {
     font-family: DINWebCondensedLight;
-    src: url('../assets/fonts/DINWeb-CondLight.woff') format('woff'), url('../fonts/DINWeb-CondLight.ttf') format('truetype');
+    src: url('../assets/fonts/DINWeb-CondLight.woff') format('woff'), url('../assets/fonts/DINWeb-CondLight.ttf') format('truetype');
 }
 
 
