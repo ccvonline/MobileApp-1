@@ -101,7 +101,7 @@
 				    		
 			    		$('.list-details img').attr("src", $(seriesNode).attr('image-url'));		    	
 					    $('.list-details h3.ui-li-heading').text( $(seriesNode).attr('title') );
-					    $('.list-details p.ui-li-desc.dates').text( $(seriesNode).attr('start-date') + ' - ' +  $(this).attr('start-date'));
+					    $('.list-details p.ui-li-desc.dates').text( $(seriesNode).attr('start-date') + ' - ' +  $(seriesNode).attr('end-date'));
 					    $('.list-details div.description').text( $(seriesNode).find('description').first().text() );
 
 					    	
