@@ -1,3 +1,5 @@
+
+
 .ui-content {
     padding: 8px 10px 8px 5px;
 }
@@ -283,8 +285,7 @@ div.map-wrap {
 /* footer */
 
 
-/* landscape overrides */
-
+/* landscape overrides 
 @media only screen and (min-width : 321px) {
 
 	.feature-image {
@@ -292,4 +293,5 @@ div.map-wrap {
 	}
 
 }
+*/
 

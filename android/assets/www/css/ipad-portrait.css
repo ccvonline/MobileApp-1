@@ -1,6 +1,12 @@
+#device-selector:after {
+	content: "I'm a tablet in portrait!";
+}
+
+
 /* home page */
 .feature-image {
-    height: 415px;
+    height: 250px;
+    background-size: 596px 250px;
 }
 
 .grid-block {
