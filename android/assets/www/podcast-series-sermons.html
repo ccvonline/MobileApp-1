@@ -104,7 +104,7 @@
 					    	
 				    	$(seriesNode).find('item').each(function(){				    	
 					    	$('#sermon-list')
-                    		.append('<li class="sermon-detail">\n<a href="podcast-detail.html" onClick="sessionStorage.sermonId=' + $(this).attr('id') + ';">\n<img src="' + $(seriesNode).attr('image2-url') +  ' "><h3 class="ui-li-heading">' + $(this).attr('sermon-name') + '</h3>\n<p class="ui-li-desc">' + $(this).attr('speaker') + '</p><p class="ui-li-desc">' + $(this).attr('date') + '</p></a>\n</li>');
+                    		.append('<li class="sermon-detail">\n<a href="http://www.ccvonline.com/Arena/mobile.aspx?page=15530&item=' + $(this).attr('id') +'">\n<img src="' + $(seriesNode).attr('image2-url') +  ' "><h3 class="ui-li-heading">' + $(this).attr('sermon-name') + '</h3>\n<p class="ui-li-desc">' + $(this).attr('speaker') + '</p><p class="ui-li-desc">' + $(this).attr('date') + '</p></a>\n</li>');
                     	
 					    });
 					    

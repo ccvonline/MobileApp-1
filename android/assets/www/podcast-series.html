@@ -34,7 +34,7 @@
 											</div>
 
 											<div class="note-button">
-												<a href="podcast-detail.html" onClick="sessionStorage.sermonId=currentSermonId;" >Watch</a>
+												<a href=""  >Watch</a>
 											</div>
 
 										</div>
@@ -110,6 +110,7 @@
 					    	$('.list-details img').attr("src",$(parentNode).attr('image-url'));
 					    	
 					    	currentSermonId = $(this).attr('id');
+					    	$('div.note-button a').attr('href', 'http://www.ccvonline.com/Arena/mobile.aspx?page=15530&item=' + $(this).attr('id'));
 					    });
 					    
 					    // clear series list
