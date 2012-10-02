@@ -13,8 +13,14 @@ public class MainActivity extends DroidGap {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //this.appView.getSettings().setPluginsEnabled(true);
+        //
         super.setIntegerProperty("splashscreen", R.drawable.splash);
+        //super.appView.getSettings().setPluginsEnabled(true);
         super.loadUrl("file:///android_asset/www/index.html", 5000);
+        
+        
+
         
         // setup localytics object
         this.localyticsSession = new LocalyticsSession(

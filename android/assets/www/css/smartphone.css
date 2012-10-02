@@ -30,9 +30,17 @@ div[data-role=header]  h1.logo {
 }
 
 .feature-image {
-    background-size: 415px 174px;
+    background-size: auto 100%;
     height: 174px;
     background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+@media screen and (orientation:landscape) {
+	/* Landscape styles */
+	.feature-image {
+		background-size: 100% auto;
+	}
 }
 
 .grid-block {
@@ -57,12 +65,13 @@ div[data-role=footer] .right {
 
 div[data-role=footer] .cell {
     width: 100%;
-    margin-left: 10%;
+    --margin-left: 10%;
 }
 
 div[data-role=footer] div[data-role=controlgroup] {
     float: none;
-    text-align: center; /* center align phone and website buttons */
+    display: table;
+    margin: 0 auto;
 }
 
 /* about us */

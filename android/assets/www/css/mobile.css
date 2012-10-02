@@ -237,17 +237,13 @@ div[data-role=footer] .cell {
 	margin: 0 .25%;
 }
 
-.feature-image {
-    max-width: auto;
+.feature-image {	
+	 max-width: auto;
     background: url('../assets/images/feature-blank.gif') no-repeat left center; /* using background-position doesn't seem to work on the iOS device */
-    height: 200px;
-    --background-size: auto 200px;
-    background-size: contain;
-    --background-size: 100% auto;
+    height: 260px;
     -webkit-transition: background 0.5s linear;
 	-moz-transition: background 0.5s linear;
 	transition: background 0.5s linear; 
-	border: 1px solid green;
 }
 
 .feature-image.campus-1 {
@@ -870,6 +866,28 @@ div#group-map #map-canvas {
 .list-details .heading .note-button {
 	float: right;
 	margin-top: 20px;
+}
+
+.list-details .heading .note-button a {
+	border-radius: 1em 1em 1em 1em;
+	background-color: #a0a0a0;
+	text-decoration: none;
+	border: 1px solid #CCCCCC;
+    color: #2F3E46;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #FFFFFF;
+	margin: 8px 0 8px 0;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	font-family: Helvetica,Arial,sans-serif;
+	cursor: pointer;
+    display: block;
+    margin: 0.5em 5px;
+    padding: 4%;
+    position: relative;
+    text-align: center;
+    background-clip: padding-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: -moz-linear-gradient(#FFFFFF, #F1F1F1) repeat scroll 0 0 #EEEEEE;
 }
 
 li.sermon-detail h3 {
