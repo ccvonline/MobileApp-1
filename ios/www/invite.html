@@ -21,19 +21,24 @@
 				   
 				   
 				   if (selectedCampusId == 1) {
-					   $('#body').val("\n\n\nChrist's Church of the Valley's Peoria Campus is located at:\n7007 W Happy Valley Rd\nPeoria, AZ 85383\n\nService Times:\nSaturday 4:30pm and 6:00pm\nSunday 9:00am, 10:30am and 12:00pm\n\nCheck us out on-line: www.ccvonline.com")
+					   $('#body').val("\n\n\nChrist's Church of the Valley's Peoria Campus is located at:\n7007 W Happy Valley Rd\nPeoria, AZ 85383\n\n<a id='map-address' href='http://www.ccvonline.com/peoria' data-theme='a' data-role='button'>Service Times</a>")
 					   campusName = "Peoria";
 				   }
 				   
 				   if (selectedCampusId == 5) {
-					   $('#body').val("\n\n\nChrist's Church of the Valley's Surprise Campus is located at:\n14787 W Cholla St\nSurprise, AZ 85379\n\nService Times:\nSaturday 4:30pm and 6:00pm\nSunday 9:00am, 10:30am and 12:00pm\n\nCheck us out on-line: www.ccvonline.com")
+					   $('#body').val("\n\n\nChrist's Church of the Valley's Surprise Campus is located at:\n14787 W Cholla St\nSurprise, AZ 85379\n\n<a id='map-address' href='http://www.ccvonline.com/surprise' data-theme='a' data-role='button'>Service Times</a>")
 					   campusName = "Surprise";
 				   }
 				   
 				   if (selectedCampusId == 6) {
-					   $('#body').val("\n\n\nChrist's Church of the Valley's Scottsdale Campus is located at:\n19030 N Pima Rd\nScottsdale, AZ 85255\n\nService Times:\nSunday 9:00am and 10:30am\n\nCheck us out on-line: www.ccvonline.com")
+					   $('#body').val("\n\n\nChrist's Church of the Valley's Scottsdale Campus is located at:\n19030 N Pima Rd\nScottsdale, AZ 85255\n\n<a id='map-address' href='http://www.ccvonline.com/scottsdale' data-theme='a' data-role='button'>Service Times</a>")
 					   campusName = "Scottsdale";
 				   }
+                                  
+                  if (selectedCampusId == 7) {
+                        $('#body').val("\n\n\nChrist's Church of the Valley's East Valley Campus is located at:\n1330 S. Crismon Rd.\nMesa, AZ 85209\n\n<a id='map-address' href='http://www.ccvonline.com/eastvalley' data-theme='a' data-role='button'>Service Times</a>")
+                        campusName = "East Valley";
+                  }
 			    });
 				
 				
@@ -133,8 +138,6 @@
 
 					<label for="body">Email Body:</label>
 					<textarea name="body" id="body"></textarea>
-					
-
 
 					
 					<a id="send-invite" href="" data-theme="a" data-role="button" data-icon="check">Send Invite</a>

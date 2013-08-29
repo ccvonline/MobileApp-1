@@ -998,7 +998,7 @@ static LocalyticsSession *_sharedLocalyticsSession = nil;
 // new vs returning counts do not break. This will be removed before it causes grief.
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-	NSString *systemId = [[UIDevice currentDevice] uniqueIdentifier];
+	NSString *systemId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
 #pragma clang diagnostic pop    
     
 	return systemId;

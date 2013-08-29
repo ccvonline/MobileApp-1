@@ -863,12 +863,14 @@ div#group-map #map-canvas {
 	float: left;
 }
 
-.list-details .heading .note-button {
+.note-button {
 	float: right;
 	margin-top: 20px;
+	width: 100%;
+	display: block;
 }
 
-.list-details .heading .note-button a {
+.note-button a {
 	border-radius: 1em 1em 1em 1em;
 	background-color: #a0a0a0;
 	text-decoration: none;

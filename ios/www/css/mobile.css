@@ -80,7 +80,7 @@ span.ui-slider-label-b {
 body {
 	font-size: 100%;
 	background-color: #101010 !important;
-	background-image: url('../assets/images/dark-metal-grid-3.jpg') !important;
+	background-image: url('../assets/images/dark-texture.png') !important;
 }
 
 .ui-br { 
@@ -250,6 +250,10 @@ div[data-role=footer] .cell {
 
 .feature-image.campus-6 {
 	background-image: url('../assets/images/campus-6.jpg') !important;
+}
+
+.feature-image.campus-7 {
+	background-image: url('../assets/images/campus-7.jpg') !important;
 }
 
 

@@ -31,6 +31,7 @@ var campusPhone = new Array();
 campusPhone[1] = "623.376.2444";       
 campusPhone[5] = "623.875.9000";
 campusPhone[6] = "480.502.9800";
+campusPhone[7] = "480.218.1456";
 
 // define global data vars
 var adTitle = '';
@@ -104,6 +105,9 @@ function getCampusName(campusId) {
 	   case '6':
 	      return 'Scottsdale';
 	      break;
+        case '7':
+            return 'East Valley';
+            break;
 	   default:
 	   	  return campusId;
 	}

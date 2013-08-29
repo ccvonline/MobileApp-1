@@ -18,9 +18,9 @@
 			</script>
 			
 			<div id="content" class="ui-content" data-role="content" role="main">	
-				
+
 				<div class="feedTopicView">
-					<div id="ui-wrap" style="display: none;">
+					<div id="ui-wrap" >
 						<div id="highlight-item">
 								<h1>This Week's Notes</h1>
 								
@@ -28,9 +28,9 @@
 									<div class="heading group">
 										<img class="note-this-week-image">
 										<div class="summary">
-											<h3 class="ui-li-heading">Heading</h3>
-											<p class="ui-li-desc date">Date</p>
-											<p class="ui-li-desc speaker">Speaker</p>
+											<h3 class="ui-li-heading"></h3>
+											<p class="ui-li-desc date"></p>
+											<p class="ui-li-desc speaker"></p>
 										</div>
 										
 										<div class="note-button">
@@ -38,7 +38,7 @@
 										</div>
 										
 									</div>
-									<div class="description">Desc</div>
+									<div class="description"></div>
 								</div>
 	
 									
@@ -80,70 +80,28 @@
 				var lastRefresh = null;
 
 				
-				$("#notes-series").live('pageshow',function() {
+				//$("#notes-series").live('pageshow',function() {
 			       
-			       LocalyticsPlugin.tagScreen("Notes Series");
+			       //LocalyticsPlugin.tagScreen("Notes Series");
 			       
 			        // show loading spinner
 			        //$.mobile.showPageLoadingMsg(true)
 			       //$('.ui-icon-loading').fadeIn();
 			       
 			       // set campus phone in footer
-			       setCampusPhone();
+			       //setCampusPhone();
 			       
-			       var errorOccurred = false;
-			       channelXmlData = getChannelData();
+			       //var errorOccurred = false;
+			       //channelXmlData = getChannelData();
 			       
-			       if (channelXmlData == null) {
-				       errorOccurred = true;
-			       } else {
+			       //if (channelXmlData == null) {
+				   //    errorOccurred = true;
+			       //} else {
 				       
-				       // load data into screen
-				       
-				       // fill in highlight item
-				       $('item[note-item="True"]', channelXmlData).each(function(){		    	
-					    	$('.list-details h3.ui-li-heading').text( $(this).attr('sermon-name') );
-					    	$('.list-details p.ui-li-desc.date').text( $(this).attr('date') );
-					    	$('.list-details p.ui-li-desc.speaker').text( $(this).attr('speaker') );
-					    	$('.list-details div.description').text( $(this).find('description').text() );
-					    	
-					    	// get parent
-					    	var parentNode = $(this).parent();
-					    	$('.list-details img').attr("src",$(parentNode).attr('image-url'));
-					    	
-					    	currentSermonId = $(this).attr('id');
-					    });
-					    
-					    // clear series list
-					    $('#previous-series-list li').remove();
-					    $('#previous-series-list').listview( 'refresh', true);
-						
-					    // add heading
-					    $('#previous-series-list').append('<li data-role="list-divider">Previous Sermon Series</li>');
-					    
-					    // fill in series list view
-					    $(channelXmlData).find('topic').each(function(){				    	
-					    	$('#previous-series-list')
-                    		.append('<li>\n<a href="notes-series-sermons.html" onClick="sessionStorage.seriesId=' + $(this).attr('id') + ';">\n<img src="' + $(this).attr('image2-url') +  ' "><h3 class="ui-li-heading">' + $(this).attr('title') + '</h3>\n<p class="ui-li-desc">' + $(this).attr('start-date') + ' - ' + $(this).attr('end-date') + '</p>\n</a>\n</li>');
-                    	
-					    });
-					    
-					    // refresh grid
-					    $('#previous-series-list').listview( 'refresh', true);
-			       }
+				      
+				   //}
 					
-					if (!errorOccurred) {
-						$('#ui-wrap').show();
-						$('#ui-error').hide();
-					} else {
-						$('#ui-wrap').hide();
-						$('#ui-error').fadeIn('fast');						
-					}
-					
-					// hide loading spinner
-					//$('.ui-icon-loading').fadeOut();
-					//$.mobile.hidePageLoadingMsg(true)
-				});
+				//});
 				
 		</script>
 

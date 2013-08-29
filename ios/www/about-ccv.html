@@ -24,67 +24,6 @@
 					<h1>Our Campus Locations</h1>
 					<p><div id="campus-map-canvas"></div></p>
 				</div>
-				
-				<div class=" content-wrap service-times group">
-					<h1>Campus Service Times</h1>
-					
-					<ul class="campus-times">
-						<li><h2>Peoria</h2>
-							7007 W Happy Valley Rd<br>
-							Peoria, AZ 85383<br>
-							623.376.2444
-							<p>
-							<div class="times">
-								Saturday 4:30PM and 6:00 PM<br>
-								Sunday 9:00AM, 10:30AM and 12:00PM
-							</div>
-							
-							<div class="invite-button">
-								<a href="invite.html" onClick="sessionStorage.inviteCampusId=1;">
-								<i class="icon-envelope"></i>
-								Invite A Friend to Peoria</a>
-							</div>
-							
-						</li>
-		
-						<li><h2>Scottsdale</h2>
-							19030 N Pima Rd <br>
-							Scottsdale AZ 85255<br>
-							480.502.9800
-							<p>
-							<div class="times">
-								Sunday 9:00AM and 10:30AM
-							</div>
-						
-							<div class="invite-button">
-								<a href="invite.html" onClick="sessionStorage.inviteCampusId=6;">
-								<i class="icon-envelope"></i>
-								Invite A Friend to Scottsdale</a>
-							</div>
-							
-						</li>
-		
-						<li><h2>Surprise</h2>
-							14787 W Cholla St<br>
-							Surprise, AZ 85379<br>
-							623.875.9000
-							<p>
-							<div class="times">
-								Saturday 4:30PM and 6:00PM<br>
-								Sunday 9:00AM, 10:30AM and 12:00PM
-							</div>
-							
-							<div class="invite-button">
-								<a href="invite.html" onClick="sessionStorage.inviteCampusId=5;">
-								<i class="icon-envelope"></i>
-								Invite A Friend to Surprise</a>
-							</div>
-							
-						</li>
-						
-						
-					</ul>
-				</div>
 					
 				<div class="content-wrap connect-with-us">
 					<h1>Connect With Us On-line</h1>
@@ -117,7 +56,7 @@
 				        };
 				        
 				        var campusOptionsIpad = {
-				          center: new google.maps.LatLng(33.66222,-112.091446),
+				          center: new google.maps.LatLng(33.577405,-112.116852),
 				          zoom: 10,
 				          disableDefaultUI: true,
 	
@@ -142,21 +81,26 @@
 				        var peoriaCampus = new google.maps.LatLng(33.709876,-112.20868);
 				        var surpriseCampus = new google.maps.LatLng(33.58548,-112.378925);
 				        var scottsdaleCampus = new google.maps.LatLng(33.657574,-111.889124);
+                        var evCampus = new google.maps.LatLng(33.390643,-111.617071);
 				        
 				        var infowindow = new google.maps.InfoWindow({		
 							});
 						
 						var peoriaInfoWindow = new google.maps.InfoWindow({
-							content: '<div class="campus-info-window"><h2>Peoria Campus</h2>7007 W Happy Valley Rd<br>Peoria, AZ 85383<br>623.376.2444<p><div class="invite-button-map"><a href="invite.html" onClick="sessionStorage.inviteCampusId=1;"><i class="icon-envelope"></i> Invite a Friend to Peoria</a></div></div>'
+							content: '<div class="campus-info-window"><h2>Peoria Campus</h2>7007 W Happy Valley Rd<br>Peoria, AZ 85383<br>623.376.2444</div>'
 						});
 						
 						var surpriseInfoWindow = new google.maps.InfoWindow({
-							content: '<div class="campus-info-window"><h2>Surprise Campus</h2>14787 W Cholla St<br>Surprise, AZ 85379<br>623.875.9000<p><div class="invite-button-map"><a href="invite.html" onClick="sessionStorage.inviteCampusId=5;"><i class="icon-envelope"></i> Invite a Friend to Surprise</a></div></div>'
+							content: '<div class="campus-info-window"><h2>Surprise Campus</h2>14787 W Cholla St<br>Surprise, AZ 85379<br>623.875.9000</div>'
 						});
 						
 						var scottsdaleInfoWindow = new google.maps.InfoWindow({
-							content: '<div class="campus-info-window"><h2>Scottsdale Campus</h2>19030 N Pima Rd <br>Scottsdale AZ 85255<br>480.502.9800<p><div class="invite-button-map"><a href="invite.html" onClick="sessionStorage.inviteCampusId=6;"><i class="icon-envelope"></i> Invite a Friend to Scottsdale</a></div></div>'
+							content: '<div class="campus-info-window"><h2>Scottsdale Campus</h2>19030 N Pima Rd <br>Scottsdale, AZ 85255<br>480.502.9800</div>'
 						});
+                        
+                        var evInfoWindow = new google.maps.InfoWindow({
+                              content: '<div class="campus-info-window"><h2>East Valley</h2>1330 S. Crismon Rd<br>Mesa, AZ 85209<br>480.218.1456</div>'
+                              });
 										
 						// place icon for search point	
 						peoriaMarker = new google.maps.Marker({
@@ -185,6 +129,15 @@
 						    animation: google.maps.Animation.DROP,
 						    position: scottsdaleCampus
 						});
+                        
+                        evMarker = new google.maps.Marker({
+                            map: map,
+                            icon: ccvImage,
+                            shadow: ccvShadow,
+                            shape: ccvShape, 
+                            animation: google.maps.Animation.DROP,
+                            position: evCampus
+                        });
 						
 						// wire up info windows
 						google.maps.event.addListener(peoriaMarker, 'click', function() {
@@ -198,6 +151,16 @@
 						google.maps.event.addListener(scottsdaleMarker, 'click', function() {
 							scottsdaleInfoWindow.open(map, scottsdaleMarker);
 						});
+                        
+                        google.maps.event.addListener(evMarker, 'click', function() {
+                            evInfoWindow.open(map, evMarker);
+                        });
+                        
+                        // set styling for map
+                        var styledMapOptions = { map: map }
+                        var styledMap = new google.maps.StyledMapType(ccvMapStyles, styledMapOptions);
+                        map.mapTypes.set('CCV', styledMap);
+                        map.setMapTypeId('CCV');
 					}
 					
 					 $("#about-ccv").live('pageshow',function() {
